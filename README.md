@@ -3,8 +3,7 @@
 [![Build Status](https://travis-ci.org/jupyter/repo2docker.svg?branch=master)](https://travis-ci.org/jupyter/repo2docker)
 [![Documentation Status](https://readthedocs.org/projects/repo2docker/badge/?version=latest)](http://repo2docker.readthedocs.io/en/latest/?badge=latest)
 
-**jupyter-repo2docker** takes as input a repository source, such as a GitHub
-repo. It then builds, runs, and/or pushes Docker images built from that source.
+**jupyter-repo2docker** takes a repository source (for example a GitHub repo) as input. It then builds, runs, and/or pushes Docker images built from that source.
 
 See the [repo2docker documentation](http://repo2docker.readthedocs.io)
 for more information.
@@ -19,7 +18,7 @@ Supported on Linux and macOS. [See documentation note about Windows support.](ht
 
 ## Installation
 
-To install from PyPI, the python packaging index, using `pip`:
+To install from PyPI (python packaging index), using `pip`:
 
 ```bash
 pip install jupyter-repo2docker
@@ -35,9 +34,8 @@ pip install -e .
 
 ## Usage
 
-The core feature of repo2docker is to fetch a repo (from github or locally),
-build a container image based on the specifications found in the repo &
-optionally launch a local Jupyter Notebook you can use to explore it.
+The core feature of repo2docker is fetching a git repo and
+building a container image based on repo. The git repo can be either local or online. The building process uses the specifications found in the repo. A local Jupyter Notebook can be launched optionally. You can use the Notebook to explore the repositories.
 
 **Note that Docker needs to be running on your machine for this to work.**
 
@@ -56,7 +54,7 @@ something like:
         http://0.0.0.0:36511/?token=f94f8fabb92e22f5bfab116c382b4707fc2cade56ad1ace0
 ```
 
-If you copy paste that URL into your browser you will see a Jupyter Notebook
+If you copy and paste that URL into your browser you will see a Jupyter Notebook
 with the contents of the repository you had just built!
 
 For more information on how to use ``repo2docker``, see the
